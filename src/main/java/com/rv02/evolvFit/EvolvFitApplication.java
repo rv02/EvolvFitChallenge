@@ -5,7 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackageClasses = {BlogRepository.class})
+@EnableJpaRepositories(basePackageClasses = {BlogRepository.class,
+		CommentRepository.class, ParentChildCommentRepository.class})
 public class EvolvFitApplication {
 
 	public static void main(String[] args) {

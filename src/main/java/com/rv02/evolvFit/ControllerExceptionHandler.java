@@ -23,8 +23,8 @@ public class ControllerExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler({BlogNotFoundException.class})
-    public HashMap<String, String> handleBlogNotFoundException(Exception e) {
+    @ExceptionHandler({DataNotFoundException.class})
+    public HashMap<String, String> handleNotFoundException(Exception e) {
         HashMap<String, String> response = new HashMap<>();
         response.put("message", NOT_FOUND_MESSAGE);
         response.put("error", e.getClass().getSimpleName());
