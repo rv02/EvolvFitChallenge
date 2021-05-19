@@ -101,6 +101,8 @@ public class Controller {
 
     @GetMapping(path = "/comment/{id}")
     public List<Comment> getReplies(@PathVariable int id) {
+        commentRepository.findById(id)
+                .orElseThrow(DataNotFoundException::new);
         return commentRepository.findAllChidren(id);
     }
 }
