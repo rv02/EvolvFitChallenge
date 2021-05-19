@@ -16,4 +16,10 @@ public interface ParentChildCommentRepository extends
     )
     List<Integer> findAllParents(int id);
 
+    @Query(
+            value = "select * from PARENT_CHILD_COMMENT where PARENT_COMMENT_ID in (select id from COMMENTS where BLOG_ID = ?1)",
+            nativeQuery = true
+    )
+    List<ParentChildComment> findBlogCommentRelationships(int id);
+
 }

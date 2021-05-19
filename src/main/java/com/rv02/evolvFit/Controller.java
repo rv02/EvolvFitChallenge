@@ -44,6 +44,9 @@ public class Controller {
     public Blog deleteBlog(@PathVariable int id) {
         Blog blog = blogRepository.findById(id)
                 .orElseThrow(DataNotFoundException::new);
+        parentChildCommentRepository.deleteAll(
+                parentChildCommentRepository.findBlogCommentRelationships(id)
+        );
         blogRepository.deleteById(id);
         return blog;
     }

@@ -26,6 +26,9 @@ public class ParentChildComment {
         this.childCommentID = childCommentID;
     }
 
+    public ParentChildComment() {
+    }
+
     public Comment getParentCommentID() {
         return parentCommentID;
     }
