@@ -1,4 +1,7 @@
 # Posts & Comments Thread Engine
+
+Reddit like comment thread.
+
 [Postman collection link](https://www.getpostman.com/collections/048bfbaeeb7ade0f78aa)
 
 [Schema modelling reference](https://nehajirafe.medium.com/data-modeling-designing-facebook-style-comments-with-sql-4cf9e81eb164): 
